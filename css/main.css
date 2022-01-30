@@ -1,0 +1,38 @@
+.ativo{
+    display: none!important;
+}
+
+.sidebar{
+    position:absolute;
+    top: 0;
+    display: flex;
+    flex-flow: column wrap;
+    width: 25%;
+    background-color: rgb(255, 255, 255);
+    border: 1px grey solid;
+    z-index: 1000;
+}
+.mainContent{
+    width: 100%;
+}
+
+.titileSidebar >h1{
+    padding: 15px;
+    font-size: 22px;
+}
+
+.x{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.botao{
+    background-color: rgb(141, 206, 255);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    color: blue;
+    font-size: 20px;
+}
+
