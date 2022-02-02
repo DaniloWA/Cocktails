@@ -1,4 +1,5 @@
-const criarBotao = (categoria) => {
+//SideBar
+export const criarBotao = (categoria) => {
     const elementPai = document.querySelector('.mainContent');
 
     const div = document.createElement('div');
@@ -9,7 +10,7 @@ const criarBotao = (categoria) => {
     elementPai.appendChild(div);
     div.appendChild(span);
 };
-
+//Bottom List
 const createlist = (conteudo) => {
 
     const ul = document.querySelector('.list');
@@ -24,35 +25,6 @@ const createlist = (conteudo) => {
 
 };
 
-const createPopUp = (imagem, titulo, alcool, descricao) => {
-
-    const parentElement = document.querySelector('.pop-up');
-    const image = document.createElement('img');
-    const strong = document.createElement('strong');
-    const small = document.createElement('small');
-    const butao = document.createElement('button');
-
-    parentElement.className = 'toast-header';
-    image.className = 'rounded me-2';
-    image.src = imagem;
-    image.alt = 'cocktail';
-    image.style = 'width: 80px; height: 80px;';
-    strong.classList = 'me-auto';
-    
-    butao.type = 'button';
-    butao.className = 'btn-close';
-    //butao.data-bs-dismiss = 'toast'; - fazer
-    //aria-label="Close" - fazer
-
-    parentElement.appendChild(image);
-    parentElement.appendChild(strong);
-    parentElement.appendChild(small);
-    parentElement.appendChild(butao);
-
-    strong.textContent = titulo;
-    small.textContent = alcool;
-    small.textContent = descricao;
-};
 
 const createSecondDiv = (texto, categoria, glass, detalhes) => {
 
@@ -85,4 +57,9 @@ const createSecondDiv = (texto, categoria, glass, detalhes) => {
 </div> */
 
 
-    
+
+
+
+
+
+
