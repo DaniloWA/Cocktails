@@ -2,13 +2,21 @@ import generateDrink from './randomDrink.js';
 import ingredientsList from "./ingredients.js";
 import categories from "./categories.js";
 import glassesList from "./glasses.js";
-/*import searchByName from "./search";*/
+import searchByName from "./search.js";
+
+
+const search = document.querySelector('#formSearch')
+const searchInput = document.querySelector('#searchCocktail')
+const ulList = document.querySelector('#ulList')
+
 
 generateDrink();
+
 setInterval( () => { 
     generateDrink()
 }, 20000);
 
+/*
 categories()
   .then(dataCategories => {
 
@@ -28,11 +36,12 @@ categories()
   })
 glassesList()
 ingredientsList()
+*/
 
-
-document.querySelector('form').addEventListener('submit', e => {
+search.addEventListener('submit', e => {
   e.preventDefault();
-
+  searchByName(searchInput.value.trim())
+  ulList.classList = "card w-100"
 })
 
 
@@ -40,5 +49,6 @@ document.querySelector('form').addEventListener('submit', e => {
 
 
 
+ 
 
 

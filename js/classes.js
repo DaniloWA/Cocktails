@@ -11,7 +11,7 @@ export const criarBotao = (categoria) => {
     div.appendChild(span);
 };
 //Bottom List
-const createlist = (conteudo) => {
+export const createlist = (conteudo) => {
 
     const ul = document.querySelector('.list');
     const li = document.createElement('li');
@@ -25,8 +25,7 @@ const createlist = (conteudo) => {
 
 };
 
-
-const createSecondDiv = (texto, categoria, glass, detalhes) => {
+export const createSecondDiv = (texto, categoria, glass, detalhes) => {
 
     const parentElement2 = document.querySelector('.pop-up2');
     const text = document.createElement('p');

@@ -1,16 +1,16 @@
-const randomDrink = async () => {
-    const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php');
+const apiCocktail = async (endpoint) => {
+    const response = await fetch(endpoint);
     if(response.status !== 200) {
         throw new Error('Not found')
     }
     const data = await response.json();
-
+  
     return data;
-};
+  };
 
 const generateDrink = () => {
 
-    randomDrink()
+    apiCocktail("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     .then(data => {
     const imag = document.querySelector('.random')
     const titlee = document.querySelector('.titul');
@@ -27,3 +27,5 @@ const generateDrink = () => {
 }
 
 export default generateDrink;
+
+
